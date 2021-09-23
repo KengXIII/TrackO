@@ -6,8 +6,10 @@ import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.*;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.exceptions.RemarkCommandParser;
 
 /**
  * Parses user input.
@@ -62,6 +64,9 @@ public class AddressBookParser {
 
         case TrollCommand.COMMAND_WORD:
             return new TrollCommand();
+
+        case RemarkCommand.COMMAND_WORD:
+            return new RemarkCommandParser().parse(arguments);
 
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);

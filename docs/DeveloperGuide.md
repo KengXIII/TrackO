@@ -261,7 +261,6 @@ In `TuteeCard`, the string displayed is `stringRepresentation`,
 which is the returned value of the `parse` method in Level class, using `value` as the parameter. 
 For example, `stringRepresentation` of `p5` is `Primary 5`. 
 
-####
 Both `value` and `stringRepresentation` are fields belonging to Level.
 This is designed for better readability in displaying tutees. Having two fields ensures that the
 abbreviation can be obtained using `getLevel()` method in Tutee, instead of parsing the string representation back 
